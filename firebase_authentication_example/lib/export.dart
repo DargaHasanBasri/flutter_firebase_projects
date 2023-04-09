@@ -10,3 +10,5 @@ export 'package:firebase_authentication_example/views/home/home_page.dart';
 export 'package:firebase_authentication_example/views/signup/companents/have_account_signin.dart';
 export 'package:firebase_auth/firebase_auth.dart';
 export 'package:firebase_authentication_example/views/companents/background_images.dart';
+export 'package:firebase_authentication_example/views/home/companents/main_page.dart';
+export 'package:firebase_authentication_example/views/home/companents/menu_page.dart';

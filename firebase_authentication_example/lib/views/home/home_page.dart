@@ -1,6 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
-
+import 'package:flutter_zoom_drawer/config.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import '../../export.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,34 +10,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final zoomDrawerController = ZoomDrawerController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          color: AppConstans.appBackground,
-        ),
-        child: Center(
-          child: ElevatedButton(
-            child: const Text("Logout"),
-            onPressed: () {
-              FirebaseAuth.instance.signOut().then((value) {
-                debugPrint("Signed Out");
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const SignInPage()));
-              });
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SignInPage()),
-              );
-            },
-          ),
-        ),
-      ),
+    return ZoomDrawer(
+      controller: zoomDrawerController,
+      menuBackgroundColor: AppConstans.secondWhite,
+      shadowLayer1Color: AppConstans.mainGrey,
+      shadowLayer2Color: AppConstans.mainBlack,
+      menuScreen: MenuPage(
+          context: context, zoomDrawerController: zoomDrawerController),
+      borderRadius: 50,
+      showShadow: true,
+      angle: -16,
+      //drawerShadowsBackgroundColor: AppConstans.secondWhite,
+      slideWidth: MediaQuery.of(context).size.width * 0.65,
+      mainScreen: MainPage(
+          context: context, zoomDrawerController: zoomDrawerController),
     );
   }
 }
