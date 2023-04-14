@@ -1,16 +1,14 @@
-import '../../export.dart';
+import '../../../export.dart';
 
-class TextFieldWitget extends StatelessWidget {
+class BuildTextField extends StatelessWidget {
   final String textLabel;
   final IconData icon;
-  final bool isPasswordType;
   final TextEditingController controller;
 
-  const TextFieldWitget({
+  const BuildTextField({
     super.key,
     required this.textLabel,
     required this.icon,
-    required this.isPasswordType,
     required this.controller,
   });
 
@@ -18,9 +16,6 @@ class TextFieldWitget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
-      obscureText: isPasswordType,
-      enableSuggestions: !isPasswordType,
-      autocorrect: !isPasswordType,
       cursorColor: AppConstans.mainWhite,
       style: TextStyle(color: AppConstans.mainWhite.withOpacity(0.9)),
       decoration: InputDecoration(
@@ -44,9 +39,7 @@ class TextFieldWitget extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
         ),
       ),
-      keyboardType: isPasswordType
-          ? TextInputType.visiblePassword
-          : TextInputType.emailAddress,
+      keyboardType: TextInputType.emailAddress,
     );
   }
 }

@@ -7,4 +7,5 @@ class AppConstans {
   static const Color secondGrey = Color(0xFF616161);
   static const Color secondWhite = Color(0xFFB3FFFF);
   static const Color mainBlack = Color(0xFF000000);
+  static const Color mainRed = Color(0xFFEA4335);
 }

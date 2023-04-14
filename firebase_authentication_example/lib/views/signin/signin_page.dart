@@ -88,9 +88,35 @@ class _SignInPageState extends State<SignInPage> {
                   controller: _passwordTextController,
                 ),
               ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ResetPassword()),
+                  );
+                },
+                child: const Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 5, right: 33),
+                    child: Opacity(
+                      opacity: 0.7,
+                      child: Text(
+                        "Forgot Password?",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: FontConstans.poppinsMedium,
+                          color: AppConstans.mainRed,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 60, bottom: 14, left: 30, right: 30),
+                    top: 45, bottom: 14, left: 30, right: 30),
                 child: ActionButton(
                     isLogin: true,
                     onTap: () {
