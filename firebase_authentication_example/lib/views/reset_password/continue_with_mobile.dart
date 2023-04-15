@@ -8,6 +8,7 @@ class ContinueWithMobile extends StatefulWidget {
 }
 
 class _ContinueWithMobileState extends State<ContinueWithMobile> {
+  final TextEditingController _editingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,14 +44,23 @@ class _ContinueWithMobileState extends State<ContinueWithMobile> {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(top: 55, left: 20, right: 20),
+                child: BuildTextField(
+                  textLabel: "12345678",
+                  icon: Icons.mobile_friendly,
+                  controller: _editingController,
+                  textInputType: TextInputType.phone,
+                ),
+              ),
               Row(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 90, left: 50),
+                    padding: EdgeInsets.only(top: 75, left: 50),
                     child: TryGestureDetector(),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 90, left: 22),
+                    padding: const EdgeInsets.only(top: 75, left: 22),
                     child: ButtonAction(onTap: () {
                       Navigator.push(
                         context,

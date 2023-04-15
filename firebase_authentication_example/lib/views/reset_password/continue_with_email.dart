@@ -45,21 +45,22 @@ class _ContinueWithEmailState extends State<ContinueWithEmail> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 25, left: 20, right: 20),
+                padding: const EdgeInsets.only(top: 45, left: 20, right: 20),
                 child: BuildTextField(
                   textLabel: 'example@gmail.com',
                   icon: Icons.email_outlined,
                   controller: _emailController,
+                  textInputType: TextInputType.emailAddress,
                 ),
               ),
               Row(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 90, left: 50),
+                    padding: EdgeInsets.only(top: 80, left: 50),
                     child: TryGestureDetector(),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 90, left: 22),
+                    padding: const EdgeInsets.only(top: 80, left: 22),
                     child: ButtonAction(onTap: () {
                       Navigator.push(
                         context,

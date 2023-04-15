@@ -23,3 +23,7 @@ export 'package:firebase_authentication_example/views/reset_password/continue_wi
 export 'package:firebase_authentication_example/views/reset_password/continue_with_mobile.dart';
 export 'package:firebase_authentication_example/views/reset_password/companents/try_gesture_detector.dart';
 export 'package:firebase_authentication_example/views/reset_password/check_your_mobile_page.dart';
+export 'package:flutter/services.dart';
+export 'package:firebase_authentication_example/views/reset_password/companents/code_text_field.dart';
+export 'package:firebase_authentication_example/views/reset_password/companents/confirmation_button.dart';
+export 'package:flutter/gestures.dart';

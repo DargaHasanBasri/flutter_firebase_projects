@@ -27,9 +27,8 @@ class _ResetPasswordState extends State<ResetPassword> {
                   child: BackArrowButton(),
                 ),
               ),
-              Image.asset("assets/images/forgot.png"),
               const Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: 50),
                 child: Text(
                   "Password Reset",
                   style: TextStyle(
@@ -78,6 +77,21 @@ class _ResetPasswordState extends State<ResetPassword> {
                         builder: (context) => const ContinueWithMobile(),
                       ),
                     );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: ChooseButton(
+                  contentInfo: "Continue with seed phrase",
+                  icon: Icons.book_outlined,
+                  onTap: () {
+                    /* Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ContinueWithMobile(),
+                      ),
+                    ); */
                   },
                 ),
               ),

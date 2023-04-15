@@ -49,6 +49,47 @@ class _CheckYourMailState extends State<CheckYourMail> {
                   ),
                 ),
               ),
+              const SizedBox(height: 30),
+              Row(
+                children: const [
+                  SizedBox(width: 50),
+                  CodeTextField(),
+                  SizedBox(width: 30),
+                  CodeTextField(),
+                  SizedBox(width: 30),
+                  CodeTextField(),
+                  SizedBox(width: 30),
+                  CodeTextField(),
+                ],
+              ),
+              const SizedBox(height: 50),
+              RichText(
+                text: TextSpan(
+                  text: 'Didnt get a code?',
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontFamily: FontConstans.poppinsMedium,
+                    color: AppConstans.mainWhite,
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: ' Resend',
+                      style: const TextStyle(
+                        fontSize: 17,
+                        fontFamily: FontConstans.poppinsMedium,
+                        color: AppConstans.mainWhite,
+                        decoration: TextDecoration.none,
+                      ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.of(context).pop();
+                        },
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 40),
+              const ConfirmationButton(),
             ],
           ),
         ),
