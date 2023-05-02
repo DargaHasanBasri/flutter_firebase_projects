@@ -22,7 +22,7 @@ class _ContinueWithMobileState extends State<ContinueWithMobile> {
           child: Column(
             children: [
               const SizedBox(height: 80),
-              Image.asset("assets/images/forgot.png"),
+              Image.asset("assets/images/img-forgot.png"),
               const SizedBox(height: 40),
               const Text(
                 "Forgot Password?",

@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return ZoomDrawer(
       controller: zoomDrawerController,
-      menuBackgroundColor: AppConstans.secondWhite,
+      menuBackgroundColor: AppConstans.mainGrey,
       shadowLayer1Color: AppConstans.mainGrey,
       shadowLayer2Color: AppConstans.mainBlack,
       menuScreen: MenuPage(

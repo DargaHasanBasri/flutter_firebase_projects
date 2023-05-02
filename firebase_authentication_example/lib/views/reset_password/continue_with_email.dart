@@ -1,3 +1,5 @@
+import 'package:firebase_authentication_example/views/reset_password/successful_link_send.dart';
+
 import '../../export.dart';
 
 class ContinueWithEmail extends StatefulWidget {
@@ -22,7 +24,7 @@ class _ContinueWithEmailState extends State<ContinueWithEmail> {
           child: Column(
             children: [
               const SizedBox(height: 80),
-              Image.asset("assets/images/forgot.png"),
+              Image.asset("assets/images/img-forgot.png"),
               const SizedBox(height: 40),
               const Text(
                 "Forgot Password?",
@@ -62,12 +64,23 @@ class _ContinueWithEmailState extends State<ContinueWithEmail> {
                   Padding(
                     padding: const EdgeInsets.only(top: 80, left: 22),
                     child: ButtonAction(onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const CheckYourMail(),
-                        ),
-                      );
+                      var forgotEmail = _emailController.text.trim();
+                      try {
+                        FirebaseAuth.instance
+                            .sendPasswordResetEmail(email: forgotEmail)
+                            .then((value) => {
+                                  debugPrint("Email Send"),
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const SuccessfulLinkSend(),
+                                    ),
+                                  )
+                                });
+                      } on FirebaseAuthException catch (e) {
+                        debugPrint("Error $e");
+                      }
                     }),
                   ),
                 ],

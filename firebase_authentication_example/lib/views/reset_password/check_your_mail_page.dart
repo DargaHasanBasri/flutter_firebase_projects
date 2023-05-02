@@ -27,7 +27,7 @@ class _CheckYourMailState extends State<CheckYourMail> {
                   child: BackArrowButton(),
                 ),
               ),
-              Image.asset("assets/images/with_email.png"),
+              Image.asset("assets/images/img-with_email.png"),
               const SizedBox(height: 40),
               const Text(
                 "Check your mail",

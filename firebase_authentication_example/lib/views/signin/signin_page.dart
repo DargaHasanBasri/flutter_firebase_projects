@@ -140,11 +140,11 @@ class _SignInPageState extends State<SignInPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(height: 80),
-                  Image.asset("assets/images/google.png"),
+                  Image.asset("assets/images/img-google.png"),
                   const SizedBox(width: 42),
-                  Image.asset("assets/images/facebook.png"),
+                  Image.asset("assets/images/img-facebook.png"),
                   const SizedBox(width: 42),
-                  Image.asset("assets/images/instagram.png"),
+                  Image.asset("assets/images/img-instagram.png"),
                 ],
               )
             ],

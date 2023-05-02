@@ -27,7 +27,7 @@ class _CheckYourMobileState extends State<CheckYourMobile> {
                   child: BackArrowButton(),
                 ),
               ),
-              Image.asset("assets/images/with_mobile.png"),
+              Image.asset("assets/images/img-with_mobile.png"),
               const SizedBox(height: 40),
               const Text(
                 "Check your mobile phone",

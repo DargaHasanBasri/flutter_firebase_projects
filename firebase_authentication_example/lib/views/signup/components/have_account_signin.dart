@@ -1,7 +1,8 @@
-import '../../../export.dart';
 
-class HaveAccountSignUp extends StatelessWidget {
-  const HaveAccountSignUp({
+import '../../../../export.dart';
+
+class HaveAccountSignIn extends StatelessWidget {
+  const HaveAccountSignIn({
     super.key,
   });
 
@@ -11,7 +12,7 @@ class HaveAccountSignUp extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
-          "Don't have account?",
+          "Already have account?",
           style: TextStyle(
             color: AppConstans.secondGrey,
             fontFamily: FontConstans.poppinsMedium,
@@ -22,13 +23,13 @@ class HaveAccountSignUp extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const SignUpPage()),
+              MaterialPageRoute(builder: (context) => const SignInPage()),
             );
           },
           child: const Padding(
             padding: EdgeInsets.only(left: 5),
             child: Text(
-              "Sign Up",
+              "Sign In",
               style: TextStyle(
                 color: AppConstans.mainWhite,
                 fontFamily: FontConstans.poppinsMedium,
